@@ -30,7 +30,8 @@
   --paragraph-large: 500 1rem/1.5 var(--font-family-roboto-flex);
   --paragraph-medium: 500 0.875rem/1.5 var(--font-family-roboto-flex);
   --paragraph-small: 500 0.75rem/1.5 var(--font-family-roboto-flex);
-  --label-medium: 700 1.25rem/1.5 var(--font-family-roboto-flex);
+  --label-large: 700 1.25rem/1.5 var(--font-family-roboto-flex);
+  --label-medium: 700 1rem/1.5 var(--font-family-roboto-flex);
   --paragraph-large: 700 1rem/1.5 var(--font-family-roboto-flex);
 }
 
@@ -62,18 +63,28 @@ body {
 
 .p-large {
   font: var(--paragraph-large);
+  color: var(--content-secondary);
 }
 
 .p-medium {
   font: var(--paragraph-medium);
+  color: var(--content-brand);
 }
 
 .p-small {
   font: var(--paragraph-small);
+  color: var(--content-secondary);
+}
+
+.label-large {
+  font: var(--label-large);
+  text-transform: uppercase;
 }
 
 .label-medium {
   font: var(--label-medium);
+  color: var(--content-secondary);
+  text-transform: uppercase;
 }
 
 .label-small {

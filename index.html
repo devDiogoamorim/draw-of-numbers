@@ -12,6 +12,79 @@
   <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-  <h1 class="d-large">Text</h1>
+  <div class="container">
+    <header>
+      <img src="/assets/logo.svg" alt="Numbers">
+    </header>
+    <main>
+      <div class="content-left">
+        <div class="title">
+          <span class="overline">Online - Gratuito</span>
+          <h1 class="d-large">Sorteador de números</h1>
+        </div>
+        <div class="description">
+          <div class="box">
+            <div class="icon-wrapper">
+              <img src="/assets/img/speech-bubble.svg" alt="íconde de um balão de fala">
+            </div>
+            <div class="text">
+              <h3 class="p-medium">Como funciona o sorteador de números?</h3>
+              <p class="p-small">
+                O sorteador utiliza um algoritmo de geração aleatória para criar 
+                números dentro do intervalo especificado pelo usuário.
+              </p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon-wrapper">
+              <img src="/assets/img/speech-bubble.svg" alt="íconde de um balão de fala">
+            </div>
+            <div class="text">
+              <h3 class="p-medium">Posso escolher o intervalo dos números?</h3>
+              <p class="p-small">
+                Sim, você pode definir os valores mínimo e máximo para
+                o intervalo dos números sorteados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-right">
+        <div class="tile">
+          <h2 class="label-large">Quero sortear:</h2>
+          <p class="p-large">
+            defina o intervalo e a quantidade de números, clique em "Sortear" 
+            e veja os resultados na tela. É rápido e fácil!
+          </p>
+        </div>
+        <div class="input-group">
+          <div class="number-ranger">
+            <div class="input-wrapper">
+              <label for="quantity" class="label-medium">Números</label>
+              <input type="text" placeholder="1" id="quantity" maxlength="2">
+            </div>
+            <div class="input-wrapper">
+              <label for="min" class="label-medium">De</label>
+              <input type="text" placeholder="1" id="min" maxlength="3">
+            </div>
+            <div class="input-wrapper">
+              <label for="max" class="label-medium">Até</label>
+              <input type="text" placeholder="100" id="max" maxlength="3">
+            </div>
+          </div>
+          <div class="toggle-wrapper">
+            <div class="toggle">
+              <input type="checkbox" id="no-repeat">
+            </div>
+            <label for="no-repeat">Não repetir o número</label>
+          </div>
+        </div>
+        <button class="btn-primary">
+          Sortear
+          <img src="/assets/img/arrow.svg" alt="Ícone de seta">
+        </button>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
