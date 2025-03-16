@@ -50,10 +50,11 @@ function generateRandomNumbers() {
 }
 
 function displayDrawnNumbers(drawnNumber) {
-    let span = document.createElement("span")
-    span.textContent = drawnNumber
+  let formattedNumber = drawnNumber.toString().padStart(2, "0")
+  let span = document.createElement("span")
 
-    results.append(span)
+  span.textContent = formattedNumber
+  results.append(span)
 }
 
 btnDrawLots.addEventListener("click", () => {
