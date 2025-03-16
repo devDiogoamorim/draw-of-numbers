@@ -73,7 +73,7 @@ main {
 }
 
 .input input::placeholder {
-  color: var(--content-secondary);
+  color: #a9aaac4d;
 }
 
 .input input {
