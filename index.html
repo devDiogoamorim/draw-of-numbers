@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -8,21 +9,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Draw of numbers</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="/styles/style.css">
 </head>
+
 <body>
   <div class="container">
-    <header>
-      <img src="/assets/logo.svg" alt="Numbers">
-    </header>
+    <img src="/assets/logo.svg" class="logo" alt="Numbers">
     <main>
       <div class="content-left">
         <div class="title">
           <span class="overline">Online - Gratuito</span>
           <h1 class="d-large">Sorteador de números</h1>
         </div>
-        <div class="description">
+        <div class="description desktop">
           <div class="box">
             <div class="icon-wrapper">
               <img src="/assets/img/speech-bubble.svg" alt="íconde de um balão de fala">
@@ -30,7 +32,7 @@
             <div class="text">
               <h3 class="p-medium">Como funciona o sorteador de números?</h3>
               <p class="p-small">
-                O sorteador utiliza um algoritmo de geração aleatória para criar 
+                O sorteador utiliza um algoritmo de geração aleatória para criar
                 números dentro do intervalo especificado pelo usuário.
               </p>
             </div>
@@ -50,41 +52,92 @@
         </div>
       </div>
       <div class="content-right">
-        <div class="tile">
-          <h2 class="label-large">Quero sortear:</h2>
-          <p class="p-large">
-            defina o intervalo e a quantidade de números, clique em "Sortear" 
-            e veja os resultados na tela. É rápido e fácil!
-          </p>
-        </div>
-        <div class="input-group">
-          <div class="number-ranger">
-            <div class="input-wrapper">
-              <label for="quantity" class="label-medium">Números</label>
-              <input type="text" placeholder="1" id="quantity" maxlength="2">
+        <div id="container-initial">
+          <div class="tile">
+            <h2 class="label-large">Quero sortear:</h2>
+            <p class="p-large">
+              defina o intervalo e a quantidade de números, clique em "Sortear"
+              e veja os resultados na tela. É rápido e fácil!
+            </p>
+          </div>
+          <div class="input-group">
+            <div class="number-ranger">
+              <div class="input-wrapper">
+                <label for="quantity" class="label-medium">Números</label>
+                <div class="input">
+                  <input type="text" placeholder="1" id="quantity" maxlength="2" autocomplete="false">
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="min" class="label-medium">De</label>
+                <div class="input">
+                  <input type="text" placeholder="1" id="min" maxlength="3" autocomplete="false">
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="max" class="label-medium">Até</label>
+                <div class="input">
+                  <input type="text" placeholder="100" id="max" maxlength="3" autocomplete="false">
+                </div>
+              </div>
             </div>
-            <div class="input-wrapper">
-              <label for="min" class="label-medium">De</label>
-              <input type="text" placeholder="1" id="min" maxlength="3">
-            </div>
-            <div class="input-wrapper">
-              <label for="max" class="label-medium">Até</label>
-              <input type="text" placeholder="100" id="max" maxlength="3">
+            <div class="toggle-wrapper">
+              <div class="toggle">
+                <input type="checkbox" id="repeatNumber">
+                <label for="repeatNumber" class="btn-toggle"></label>
+              </div>
+              <label for="repeatNumber">Não repetir o número</label>
             </div>
           </div>
-          <div class="toggle-wrapper">
-            <div class="toggle">
-              <input type="checkbox" id="no-repeat">
-            </div>
-            <label for="no-repeat">Não repetir o número</label>
+          <button class="btn-primary" id="drawLots">
+            Sortear
+            <img src="/assets/img/rightArrow.svg" class="toggle-icon" alt="Ícone de seta">
+          </button>
+        </div>
+        <div class="result-wrapper" id="container-result">
+          <div class="title">
+            <h2 class="label-large">Resultado do sorteio</h2>
+          </div>
+          <div id="results"></div>
+          <button class="btn-primary" id="drawLotsReplace">
+            Sortear novamente
+            <img src="/assets/img/replay.svg" class="toggle-icon" alt="Ícone de replay">
+          </button>
+          <button class="btn-comeback" id="comeback">
+            <img src="/assets/img/leftArrow.svg" class="icon" alt="ícone de seta">
+            Voltar
+          </button>
+        </div>
+      </div>
+      <div class="description mobile">
+        <div class="box">
+          <div class="icon-wrapper">
+            <img src="/assets/img/speech-bubble.svg" alt="íconde de um balão de fala">
+          </div>
+          <div class="text">
+            <h3 class="p-medium">Como funciona o sorteador de números?</h3>
+            <p class="p-small">
+              O sorteador utiliza um algoritmo de geração aleatória para criar
+              números dentro do intervalo especificado pelo usuário.
+            </p>
           </div>
         </div>
-        <button class="btn-primary">
-          Sortear
-          <img src="/assets/img/arrow.svg" alt="Ícone de seta">
-        </button>
+        <div class="box">
+          <div class="icon-wrapper">
+            <img src="/assets/img/speech-bubble.svg" alt="íconde de um balão de fala">
+          </div>
+          <div class="text">
+            <h3 class="p-medium">Posso escolher o intervalo dos números?</h3>
+            <p class="p-small">
+              Sim, você pode definir os valores mínimo e máximo para
+              o intervalo dos números sorteados.
+            </p>
+          </div>
+        </div>
       </div>
     </main>
   </div>
+
+  <script src="/script.js"></script>
 </body>
 </html>
