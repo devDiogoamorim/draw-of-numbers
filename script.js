@@ -57,6 +57,12 @@ function displayDrawnNumbers(drawnNumber) {
 }
 
 btnDrawLots.addEventListener("click", () => {
+  // Verifica se os campos não estão vazios
+  if (!quantity.value || !min.value || !max.value) {
+    alert("Por favor, preencha todos os campos!");
+    return
+  }
+
   containerInitial.style.display = "none"
   containerResult.style.display = "flex"
 
