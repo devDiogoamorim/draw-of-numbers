@@ -1,5 +1,5 @@
 # 🎲 Sorteador de Números
-### https://devdiogoamorim-guesstheword.netlify.app/
+### https://devdiogoamorim-drawofnumbers.netlify.app/
 
 Este projeto é um sorteador de números desenvolvido com HTML, CSS e JavaScript.<br> 
 Ele permite que o usuário defina a quantidade de números a serem sorteados, o intervalo 
