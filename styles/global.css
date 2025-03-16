@@ -99,17 +99,20 @@ body {
   display: none !important;
 }
 
+@media (max-width: 72rem) {
+  .desktop {
+    display: none !important;
+  }
+  .mobile {
+    display: flex !important;
+  }
+}
+
 @media (max-width: 40rem) {
   .d-large {
     font: var(--display-medium);
   }
   .p-large {
     font: var(--paragraph-medium);
-  }
-  .desktop {
-    display: none !important;
-  }
-  .mobile {
-    display: inherit;
   }
 }

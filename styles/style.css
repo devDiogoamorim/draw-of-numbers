@@ -328,7 +328,7 @@ main {
   }
 }
 
-@media (max-width: 70rem) {
+@media (max-width: 72rem) {
   .container {
     max-width: 32rem;
     width: 100%;
